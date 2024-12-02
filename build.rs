@@ -3,6 +3,7 @@ use std::io;
 #[cfg(not(target_os = "windows"))]
 fn main() -> io::Result<()> {
     println!("WASM Build script is being run");
+    dbg!(cfg!(target_os = "unknown"));
     Ok(())
 }
 
